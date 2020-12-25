@@ -1,0 +1,9 @@
+{%extends 'includes/base.html' %}
+{% load static %}
+
+
+{% block body%}
+    {% for category in categories %}
+    <a href="{% url 'posts-list' %}?category={{ category.slug }}">{{ category.title }}</a> <br>
+    {% endfor %}
+{% endblock body %}
